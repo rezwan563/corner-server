@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRouter = require('./routes/users')
 const authRouter = require('./routes/auth')
+const postRouter = require('./routes/posts')
 const port = process.env.PORT || 5000;
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(morgan('common'));
 
 app.use('/corner_app/users', userRouter)
 app.use('/corner_app/auth', authRouter)
+app.use('/corner_app/posts', postRouter)
 
 
 
